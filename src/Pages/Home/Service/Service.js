@@ -1,8 +1,9 @@
 import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Service = ({ service }) => {
-  const { name, price, img, details } = service;
+  const { id, name, price, img, details } = service;
   return (
     <Col xs={12} sm={12} md={4} style={{ margin: "auto", padding: 40 }}>
       <Card
@@ -17,7 +18,9 @@ const Service = ({ service }) => {
           <Card.Title>{name}</Card.Title>
           <Card.Title>{price}</Card.Title>
           <Card.Text style={{ textAlign: "start" }}>{details}</Card.Text>
-          <Button style={{ backgroundColor: "#ED4620" }}>Go somewhere</Button>
+          <Link to={`/booking/${id}`}>
+            <Button style={{ backgroundColor: "#ED4620" }}>Go somewhere</Button>
+          </Link>
         </Card.Body>
       </Card>
     </Col>

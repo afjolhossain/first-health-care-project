@@ -1,20 +1,52 @@
-import React from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Alert, Button, Col, Form, Row, Spinner } from "react-bootstrap";
 import "./Login.css";
 import login from "../../../image/doctor.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import { useLocation } from "react-router-dom";
 
 const Login = () => {
+  const [loginData, setLoginData] = useState({});
+
+  const {
+    user,
+    loginUser,
+    isLoading,
+    authError,
+    signInGoogle,
+    signInFacebook,
+  } = useAuth();
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const hendleOnChange = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    console.log(field, value);
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+    e.preventDefault();
+  };
+
+  const handleLoginSubmit = (e) => {
+    loginUser(loginData.email, loginData.password, location, navigate);
+    e.preventDefault();
+  };
   return (
     <div className="login-page">
       <Row xs={1} md={2}>
         <Col xs={12} md={6}>
           <br />
           <Form
+            onSubmit={handleLoginSubmit}
             style={{
+              marginTop: 20,
               backgroundColor: "white",
               width: "75%",
-              height: 500,
+              height: 600,
               margin: "auto",
               justifyItems: "center",
               borderRadius: 40,
@@ -60,6 +92,9 @@ const Login = () => {
                 border: "3px solid rgb(137, 160, 179)",
               }}
               type="email"
+              name="email"
+              onChange={hendleOnChange}
+              required
               id="inputPassword5"
               aria-describedby="passwordHelpBlock"
               placeholder="Example@gmail.com"
@@ -84,6 +119,9 @@ const Login = () => {
               }}
               type="Password"
               id="inputPassword5"
+              name="password"
+              onChange={hendleOnChange}
+              required
               aria-describedby="passwordHelpBlock"
               placeholder=""
             />
@@ -100,6 +138,7 @@ const Login = () => {
                 color: "white",
                 fontWeight: 700,
               }}
+              type="submit"
             >
               Continue
             </Button>
@@ -108,18 +147,59 @@ const Login = () => {
                 New to health-Care ? Create Profile
               </p>
             </Link>
+            <div style={{ textAlign: "center" }}>
+              ----------------OR-------------------
+            </div>
+
+            <div style={{ textAlign: "center" }}>
+              <Button style={{ width: "40%" }} onClick={signInGoogle}>
+                Google
+              </Button>
+
+              <Button
+                style={{ marginLeft: 25, width: "40%" }}
+                onClick={signInFacebook}
+              >
+                Facebook
+              </Button>
+            </div>
           </Form>
+          {user?.email && (
+            <Alert
+              style={{
+                margin: "auto",
+                width: "50%",
+                borderRadius: 10,
+                marginTop: 10,
+              }}
+              variant="success"
+            >
+              user logged SuccessFully
+            </Alert>
+          )}
+          {authError && (
+            <Alert
+              style={{
+                margin: "auto",
+                width: "60%",
+                borderRadius: 10,
+                marginTop: 10,
+              }}
+              variant="danger"
+            >
+              {authError}
+            </Alert>
+          )}
+          <br />
         </Col>
+        {isLoading && (
+          <Spinner sx={12} md={6} animation="border" variant="primary" />
+        )}
+
         <Col xs={12} md={6}>
-          <img style={{ width: "100%", height: 500 }} src={login} alt="" />
+          <img style={{ width: "100%", height: 550 }} src={login} alt="" />
         </Col>
       </Row>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 };

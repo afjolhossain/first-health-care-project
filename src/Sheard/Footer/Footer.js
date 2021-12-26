@@ -5,7 +5,6 @@ import logo from "../../logo/logo.jpg";
 const Footer = () => {
   return (
     <div>
-      <br />
       <Row
         style={{
           backgroundColor: "black",

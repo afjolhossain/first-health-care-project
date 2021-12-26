@@ -14,6 +14,7 @@ const WorkingHours = () => {
       >
         <br />
         <h1 style={{ color: "white" }}>
+          S
           <FontAwesomeIcon
             style={{ color: "#ED5A23" }}
             icon={faClock}

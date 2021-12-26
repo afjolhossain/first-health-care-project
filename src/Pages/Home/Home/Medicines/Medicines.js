@@ -12,7 +12,7 @@ const Medicines = () => {
       .then((data) => setMedicines(data.medicine));
   }, []);
   return (
-    <div>
+    <div id="medicine">
       <h1
         style={{
           textAlign: "center",

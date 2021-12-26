@@ -12,7 +12,7 @@ const Services = () => {
       .then((data) => setServices(data.service));
   }, []);
   return (
-    <div id="home">
+    <div id="service">
       <h1
         style={{
           textAlign: "center",

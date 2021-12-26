@@ -12,7 +12,7 @@
       "name": "Dental care",
       "price": "9000 Tk",
       "img": "https://i.ibb.co/fSzhJkh/dental.jpg",
-      "details": "The GE LightSpeed VCT is a full-body CT scanner. VCT stands for Volume Computed Tomography. GE has designed the system to produce advanced cardiac and neuro imaging ™."
+      "details": "The GE LightSpeed VCT is a full-body CT scanner. VCT stands for Volume Computed Tomography. GE has designed the system to produce advanced cardiac and neuro imaging."
     },
     {
       "id": 3,
@@ -91,13 +91,13 @@
     {
       "id": 1,
       "name": "Shahed Ahmed",
-      "img": "https://i.ibb.co/yQzhybM/shahed.jpg",
+      "img": "https://i.ibb.co/4KNLyLY/sahed.jpg",
       "details": "Disposable Sanitary Headset Covers Latex Free, All Sizes & Colors. Disposable Sanitary Headset Covers Latex Free, All Sizes & Colors. Sign Up For Email List. Multiple Payment Options"
     },
     {
       "id": 2,
       "name": "Afjol Hossain",
-      "img": "https://i.ibb.co/LPr5rqS/afjol.jpg",
+      "img": "https://i.ibb.co/wJr8Cf1/img-afjol-1.jpg",
       "details": "The GE LightSpeed VCT is a full-body CT scanner. VCT stands for Volume Computed Tomography. GE has designed the system to produce advanced cardiac and neuro imaging using SnapShot Pulse™."
     }
   ]
