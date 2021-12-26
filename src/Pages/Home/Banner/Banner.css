@@ -1,0 +1,38 @@
+.bg-Color {
+  background-image: linear-gradient(
+    to right,
+    rgb(86, 122, 156),
+    rgb(209, 212, 214)
+  );
+  text-align: center;
+}
+.font-color {
+  color: #1c375c;
+}
+
+.Appoinment-btn {
+  background-color: rgb(173, 58, 58);
+  height: 60px;
+  width: 230px;
+  border-radius: 20px;
+  margin-right: 40px;
+  color: aliceblue;
+  /* transition-property: bottom, left;
+  transition-duration: 10s; */
+  /* animation-duration: 6s;
+  animation-duration: 120ms; */
+}
+.Appoinment-btn:hover {
+  background-color: rgb(30, 50, 66);
+}
+.learn-more-btn {
+  background-color: rgb(173, 58, 58);
+  height: 60px;
+  width: 150px;
+  border-radius: 20px;
+  margin-right: 40px;
+  color: aliceblue;
+}
+.learn-more-btn:hover {
+  background-color: rgb(30, 50, 66);
+}

@@ -1,0 +1,14 @@
+.login-page {
+  background: linear-gradient(to right, rgb(120, 143, 161), rgb(88, 103, 117));
+}
+.Login-more-btn {
+  background-color: rgb(173, 58, 58);
+  height: 60px;
+  width: 150px;
+  border-radius: 20px;
+  margin-right: 40px;
+  color: aliceblue;
+}
+.learn-more-btn:hover {
+  background-color: rgb(30, 50, 66);
+}
