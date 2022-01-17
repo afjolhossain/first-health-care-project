@@ -22,21 +22,37 @@ const Navigation = () => {
         <Container>
           <Navbar.Brand href="#home" className="d-flex ">
             <img style={{ height: 40, marginRight: 100 }} src={logo} alt="" />
-            <h4> Navbar</h4>
+            <h4 style={{ color: "#1c375c" }}> Health-Care-Center</h4>
           </Navbar.Brand>
 
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Nav.Link as={HashLink} to="/home#home">
+            <Nav.Link
+              as={HashLink}
+              to="/home#home"
+              style={{ color: "#1c375c", fontSize: 20, fontWeight: 700 }}
+            >
               Home
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/home#service">
+            <Nav.Link
+              as={HashLink}
+              to="/home#service"
+              style={{ color: "#1c375c", fontSize: 20, fontWeight: 700 }}
+            >
               Service
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/home#medicine">
+            <Nav.Link
+              as={HashLink}
+              to="/home#medicine"
+              style={{ color: "#1c375c", fontSize: 20, fontWeight: 700 }}
+            >
               Medicine
             </Nav.Link>
-            <Nav.Link as={Link} to="owner">
+            <Nav.Link
+              as={Link}
+              to="owner"
+              style={{ color: "#1c375c", fontSize: 20, fontWeight: 700 }}
+            >
               Owners
             </Nav.Link>
             {/* <Navbar.Text>

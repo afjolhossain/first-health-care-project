@@ -7,6 +7,7 @@ import Register from "./Pages/FIrebase/Register/Register";
 import Home from "./Pages/Home/Home/Home";
 import Services from "./Pages/Home/Services/Services";
 import Owners from "./Pages/Owners/Owners";
+import Product from "./Pages/Product/Product";
 import Footer from "./Sheard/Footer/Footer";
 import Navigation from "./Sheard/Navigation/Navigation";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="product" element={<Product />} />
           <Route
             path="/booking/:serviceId"
             element={

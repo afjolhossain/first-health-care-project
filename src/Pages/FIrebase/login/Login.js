@@ -5,6 +5,7 @@ import login from "../../../image/doctor.png";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useLocation } from "react-router-dom";
+import { FaFacebookSquare, FaGooglePlusSquare } from "react-icons/fa";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
@@ -152,14 +153,26 @@ const Login = () => {
             </div>
 
             <div style={{ textAlign: "center" }}>
-              <Button style={{ width: "40%" }} onClick={signInGoogle}>
+              <Button
+                style={{
+                  width: "30%",
+                  textAlign: "start",
+                }}
+                onClick={signInGoogle}
+              >
+                <FaGooglePlusSquare style={{ width: 40 }}></FaGooglePlusSquare>
                 Google
               </Button>
 
               <Button
-                style={{ marginLeft: 25, width: "40%" }}
+                style={{
+                  marginLeft: 25,
+                  width: "30%",
+                  textAlign: "start",
+                }}
                 onClick={signInFacebook}
               >
+                <FaFacebookSquare style={{ width: 40 }}></FaFacebookSquare>
                 Facebook
               </Button>
             </div>

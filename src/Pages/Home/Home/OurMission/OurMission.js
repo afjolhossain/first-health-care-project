@@ -8,6 +8,7 @@ import { faUserNurse } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faStethoscope } from "@fortawesome/free-solid-svg-icons";
 import { faMicroscope } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const OurMission = () => {
   return (
@@ -174,28 +175,32 @@ const OurMission = () => {
         </Col>
       </Row>
       <Container xs={12} md={6} style={{ marginTop: 40 }}>
-        <Button
-          style={{
-            height: 60,
-            width: "300px",
-            borderRadius: 25,
-            marginLeft: 40,
-            backgroundColor: "#ED4620",
-          }}
-        >
-          Book an Appointment
-        </Button>
-        <Button
-          style={{
-            marginLeft: 40,
-            height: 60,
-            width: "300px",
-            borderRadius: 25,
-            backgroundColor: "#ED4620",
-          }}
-        >
-          learn More
-        </Button>
+        <Link to="/product">
+          <Button
+            style={{
+              height: 60,
+              width: "300px",
+              borderRadius: 25,
+              marginLeft: 40,
+              backgroundColor: "#ED4620",
+            }}
+          >
+            Book an Appointment
+          </Button>
+        </Link>
+        <Link to="/owner">
+          <Button
+            style={{
+              marginLeft: 40,
+              height: 60,
+              width: "300px",
+              borderRadius: 25,
+              backgroundColor: "#ED4620",
+            }}
+          >
+            learn More
+          </Button>
+        </Link>
       </Container>
 
       <br />

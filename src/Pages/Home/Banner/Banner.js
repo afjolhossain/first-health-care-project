@@ -2,6 +2,7 @@ import React from "react";
 import "./Banner.css";
 import { Col, Row } from "react-bootstrap";
 import banner from "../../../image/Background.png";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -16,8 +17,12 @@ const Banner = () => {
             diseases to servr the needs of our patients
           </p>
           <div style={{ marginTop: 30 }}>
-            <button className="Appoinment-btn">Book an Appointment</button>
-            <button className="learn-more-btn">Learn More</button>
+            <Link to="/product">
+              <button className="Appoinment-btn">Book an Appointment</button>
+            </Link>
+            <Link to="/service">
+              <button className="learn-more-btn">Learn More</button>
+            </Link>
           </div>
         </Col>
         <Col sx={12} md={6}>

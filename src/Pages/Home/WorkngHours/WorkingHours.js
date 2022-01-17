@@ -3,6 +3,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { faHeartbeat } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const WorkingHours = () => {
   return (
@@ -14,7 +15,6 @@ const WorkingHours = () => {
       >
         <br />
         <h1 style={{ color: "white" }}>
-          S
           <FontAwesomeIcon
             style={{ color: "#ED5A23" }}
             icon={faClock}
@@ -58,16 +58,18 @@ const WorkingHours = () => {
           doctors.
         </h5>
         <br />
-        <Button
-          style={{
-            height: 50,
-            width: "170px",
-            borderRadius: 20,
-            backgroundColor: "#BB3714",
-          }}
-        >
-          Meet Our Doctors
-        </Button>
+        <Link to="/owner">
+          <Button
+            style={{
+              height: 50,
+              width: "170px",
+              borderRadius: 20,
+              backgroundColor: "#BB3714",
+            }}
+          >
+            Meet Our Doctors
+          </Button>
+        </Link>
       </Col>
     </Row>
   );

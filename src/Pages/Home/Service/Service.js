@@ -19,7 +19,7 @@ const Service = ({ service }) => {
           <Card.Title>{price}</Card.Title>
           <Card.Text style={{ textAlign: "start" }}>{details}</Card.Text>
           <Link to={`/booking/${id}`}>
-            <Button style={{ backgroundColor: "#ED4620" }}>Go somewhere</Button>
+            <Button style={{ backgroundColor: "#ED4620" }}>Booking Now</Button>
           </Link>
         </Card.Body>
       </Card>
